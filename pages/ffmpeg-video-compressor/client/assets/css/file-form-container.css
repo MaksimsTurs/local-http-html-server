@@ -1,0 +1,33 @@
+#file_form_container {
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.file_form_buttons_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.file_form_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  border: 1px blueviolet solid;
+  background-color: blueviolet;
+  box-shadow: 1px 1px 1px blueviolet;
+  transition: all 0.2s ease;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.file_form_button:hover {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: blueviolet;
+  box-shadow: 2px 2px 2px blueviolet;
+}

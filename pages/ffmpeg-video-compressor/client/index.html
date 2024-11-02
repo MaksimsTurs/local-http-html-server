@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/index.css">
-  <title>FFMPEG Video Compressor</title>
-</head>
-<body id="file_body_container">
-  <form id="file_form_container" enctype="multipart/form-data">
-    <label class="file_input_label_container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
-      <p>Upload File</p>
-      <input id="file_input" type="file">
-    </label>
-    <div class="file_input_preview_container"></div>
-    <div class="file_input_data_container">
-      <div data-file-data="path" class="file_input_data_body">
-        <p>Pfad zu Datei:</p>
-        <div class="file_input_output_path_container">
-          <p class="file_input_output_path">Keine</p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-copy"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M16 4h2a2 2 0 0 1 2 2v4"/><path d="M21 14H11"/><path d="m15 10-4 4 4 4"/></svg>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/index.css">
+    <title>FFMPEG Video Compressor</title>
+  </head>
+  <body>
+    <form id="file_form_container" enctype="multipart/form-data">
+      <div class="files_preview_container">
+        <div class="files_preview_table_empty"></div>
       </div>
-      <div data-file-data="size" class="file_input_data_body">
-        <p>Datei größe:</p>
-        <p>0 B</p>
+      <div class="file_form_buttons_container">
+        <button class="file_form_button" type="submit">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>        
+        </button>
+        <label class="file_form_button">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          <input id="file_form_input" type="file" multiple>
+        </label>
       </div>
-      <div data-file-data="type" class="file_input_data_body">
-        <p>Date typ:</p>
-        <p>Keine</p>
-      </div>
-    </div>
-    <button type="submit">Upload</button>
-  </form>
-  <script src="./assets/index.js"></script>
-</body>
+    </form>
+    <script type="module" src="./assets/index.js"></script>
+  </body>
 </html>

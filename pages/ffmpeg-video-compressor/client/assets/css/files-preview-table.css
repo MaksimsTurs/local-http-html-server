@@ -1,0 +1,32 @@
+.files_preview_table {
+  width: 100%; 
+  border: 1px solid blueviolet;
+}
+
+.files_preview_table, tr, td {
+  border: 1px solid blueviolet;
+  border-collapse: collapse;
+}
+
+.files_preview_table > tr > td {
+  padding: 0.5rem;
+  color: blueviolet;
+}
+
+.files_preview_table > tr > td > input {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.files_preview_table > tr > td:hover {
+  transition: all 0.2s ease;
+  background-color: rgba(137, 43, 226, 0.2);
+}
+
+.files_preview_table_empty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: blueviolet;
+}

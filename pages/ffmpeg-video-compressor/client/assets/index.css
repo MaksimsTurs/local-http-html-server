@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@import './file-input-label-container.css';
-@import './file-input-data-container.css';
+@import './css/file-form-container.css';
+@import './css/files-preview-table.css';
 
 *, *::after, *::before {
   font-family: "Roboto", sans-serif;
@@ -15,46 +15,4 @@ html, body { height: 100%; }
 button, input, input:focus { border: none; outline: none; background-color: transparent; }
 
 input[type=file] { display: none; }
-
-#file_body_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-#file_form_container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  gap: 0.5rem;
-  width: fit-content;
-  max-width: 30rem;
-  padding: 1rem;
-}
-
-#file_form_container > button {
-  border-radius: 5px;
-  width: 100%;
-  color: white;
-  padding: 0.5rem 1rem;
-  background-color: brown;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-#file_form_container > button:hover {
-  background-color: rgb(99, 23, 23);
-  transition: all 0.3s ease;
-}
-
-.file_input_preview_container {
-  display: flex;
-  justify-content: center;
-  height: fit-content;
-}
-
-.file_input_preview_container > img, video {
-  max-height: 20rem;
-}
+input[type=number] { appearance: textfield; }

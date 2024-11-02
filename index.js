@@ -15,13 +15,14 @@ import { QUESTIONS, PATHS_TO_WEBSITES } from './src/constants.js'
 
 const __FILENAME       = url.fileURLToPath(import.meta.url),
       __DIRNAME        = path.dirname(__FILENAME),
+      PORT             = 4001,
       PROGRAM_VERSION  = _package.version
       
 let CONFIGURATIONS = {
-  PROGRAM_VERSION,
   __FILENAME,
   __DIRNAME,
-  HTTP_SERVER_URL: 'http://localhost:4000',
+  PROGRAM_VERSION,
+  HTTP_SERVER_URL: `http://localhost:${PORT}`,
   PATH_TO_WEBSITE: '',
   PATH_TO_WEBSITE_SERVER: '',
   PATH_TO_ASSETS: ''
@@ -57,7 +58,7 @@ program
       res.sendFile(CONFIGURATIONS.PATH_TO_WEBSITE)
     })
     
-    server.listen(4000, () => {
+    server.listen(PORT, () => {
       console.log(`> Listen port ${chalk.yellowBright(4000)}, configurations =`, CONFIGURATIONS)
       console.log(`> Open URL ${chalk.greenBright(CONFIGURATIONS.HTTP_SERVER_URL)} in default Browser`)
       console.log(`> Start Website Server from ${chalk.greenBright(CONFIGURATIONS.PATH_TO_WEBSITE_SERVER)}`)
